@@ -1,26 +1,27 @@
-import React, {PropTypes, Component} from 'react'
+import React, {PropTypes} from 'react'
 import TodoTextInput from './TodoTextInput'
 
-export default class Header extends Component {
-  static propTypes = {
-    addTodo: PropTypes.func.isRequired
-  }
+const Header = ({addTodo}) => {
 
-  handleSave = text => {
+  const handleSave = text => {
     if (text.length !== 0) {
-      this.props.addTodo(text)
+      addTodo(text)
     }
   }
 
-  render() {
-    return (
-      <header className="header">
-        <h1>todos</h1>
-        <TodoTextInput
-          newTodo
-          onSave={this.handleSave}
-          placeholder="What needs to be done?"/>
-      </header>
-    )
-  }
+  return (
+    <header className="header">
+      <h1>todos</h1>
+      <TodoTextInput
+        newTodo
+        onSave={handleSave}
+        placeholder="What needs to be done?"/>
+    </header>
+  )
 }
+
+Header.propTypes = {
+  addTodo: PropTypes.func.isRequired
+}
+
+export default Header
