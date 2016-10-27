@@ -1,5 +1,5 @@
 import React, {Component } from 'react'
-// import Header from './Header'
+import Header from './Header'
 // import MainSection from './MainSection'
 
 const initialState = [
@@ -20,9 +20,6 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    {this.addTodo('Did this work')}
-  }
   addTodo = (text) => {
     const todos = [
       {
@@ -80,12 +77,11 @@ class App extends Component {
 
 
   render() {
-    const {todos, actions} = this.state
     return(
       <div>
         {console.log(this.state.todos)}
-        {/* <Header addTodo={actions.addTodo} />
-        <MainSection todos={todos} actions={actions} /> */}
+        <Header addTodo={this.actions.addTodo} />
+        {/* <MainSection todos={todos} actions={actions} /> */}
       </div>
     )
   }
