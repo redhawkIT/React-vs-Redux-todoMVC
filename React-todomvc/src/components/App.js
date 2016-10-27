@@ -1,6 +1,6 @@
 import React, {Component } from 'react'
 import Header from './Header'
-// import MainSection from './MainSection'
+import MainSection from './MainSection'
 
 const initialState = [
   {
@@ -79,9 +79,8 @@ class App extends Component {
   render() {
     return(
       <div>
-        {console.log(this.state.todos)}
         <Header addTodo={this.actions.addTodo} />
-        {/* <MainSection todos={todos} actions={actions} /> */}
+        <MainSection todos={this.state.todos} actions={this.actions} />
       </div>
     )
   }
