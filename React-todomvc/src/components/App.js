@@ -4,7 +4,7 @@ import MainSection from './MainSection'
 
 const initialState = [
   {
-    text: 'React es6 TodoMVC',
+    text: 'React ES6 TodoMVC',
     completed: false,
     id: 0
   }
