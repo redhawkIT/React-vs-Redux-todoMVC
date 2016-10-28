@@ -4,7 +4,7 @@ import MainSection from './MainSection'
 
 const initialState = [
   {
-    text: 'Use Redux',
+    text: 'React es6 TodoMVC',
     completed: false,
     id: 0
   }
