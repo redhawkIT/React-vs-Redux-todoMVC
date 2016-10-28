@@ -1,6 +1,6 @@
  import React, { Component, PropTypes } from 'react'
  import TodoItem from './TodoItem'
- // import Footer from './Footer'
+ import Footer from './Footer'
 
 
  const TODO_FILTERS = {
@@ -72,7 +72,7 @@
              <TodoItem key={todo.id} todo={todo} {...actions} />
            )}
          </ul>
-         {/* {this.renderFooter(completedCount)} */}
+         {this.renderFooter(completedCount)}
        </section>
      )
    }

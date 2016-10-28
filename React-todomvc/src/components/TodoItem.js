@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, {Component, PropTypes} from 'react'
 import classnames from 'classnames'
 import TodoTextInput from './TodoTextInput'
 
@@ -28,7 +28,7 @@ export default class TodoItem extends Component {
   }
 
   render() {
-    const { todo, completeTodo, deleteTodo } = this.props
+    const {todo, completeTodo, deleteTodo} = this.props
 
     let element
     if (this.state.editing) {
